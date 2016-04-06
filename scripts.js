@@ -10,12 +10,12 @@ function Replay() {
 }
 
 Score.prototype.addTotal = function(tempScore) {
-  return this.totalScore + tempScore;
+  this.totalScore += tempScore;
 
 }
 
 Score.prototype.addTemp = function(randRoll) {
-  return this.tempScore + randRoll;
+  this.tempScore += randRoll;
 
 }
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
         $("#currentPlayerOne").hide();
         $("#currentPlayerTwo").show();
       } else {
-        p1.tempScore = p1.addTemp(randRoll);
+        p1.addTemp(randRoll);
         $("#currentSubTotal").text(p1.tempScore);
       }
     }
@@ -54,7 +54,7 @@ $(document).ready(function() {
           $("#currentPlayerTwo").hide();
           $("#currentPlayerOne").show();
         } else {
-          p2.tempScore = p2.addTemp(randRoll);
+          p2.addTemp(randRoll);
           $("#currentSubTotal").text(p2.tempScore);
         }
       }
@@ -65,7 +65,7 @@ $(document).ready(function() {
   $("#stopRoll").click(function(event) {
 
     if (currentPlayer === 1) {
-      p1.totalScore = p1.addTotal(p1.tempScore);
+      p1.addTotal(p1.tempScore);
       p1.tempScore = 0;
       $("#playerOneScore").text(p1.totalScore);
       $("#currentSubTotal").text(0);
@@ -79,7 +79,7 @@ $(document).ready(function() {
         }
 
     } else {
-      p2.totalScore = p2.addTotal(p2.tempScore)
+      p2.addTotal(p2.tempScore)
       p2.tempScore = 0;
       $("#playerTwoScore").text(p2.totalScore);
       $("#currentSubTotal").text(0);
@@ -91,7 +91,6 @@ $(document).ready(function() {
           Replay();
         }
     }
-
 
 
   });
