@@ -4,6 +4,11 @@ function Score() {
 
 }
 
+function Replay() {
+  var response = confirm("Would you like to play again?");
+   if(response)location.reload();
+}
+
 Score.prototype.addTotal = function(tempScore) {
   return this.totalScore + tempScore;
 
@@ -63,17 +68,28 @@ $(document).ready(function() {
       p1.totalScore = p1.addTotal(p1.tempScore);
       p1.tempScore = 0;
       $("#playerOneScore").text(p1.totalScore);
+      $("#currentSubTotal").text(0);
       currentPlayer = 2;
       $("#currentPlayerOne").hide();
       $("#currentPlayerTwo").show();
+        if (p1.totalScore >= 50) {
+          alert("Yay!")
+          Replay();
+
+        }
 
     } else {
       p2.totalScore = p2.addTotal(p2.tempScore)
       p2.tempScore = 0;
       $("#playerTwoScore").text(p2.totalScore);
+      $("#currentSubTotal").text(0);
       currentPlayer = 1;
       $("#currentPlayerTwo").hide();
       $("#currentPlayerOne").show();
+        if (p2.totalScore >= 50) {
+          alert("Huzzah!")
+          Replay();
+        }
     }
 
 
