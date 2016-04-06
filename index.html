@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Pass the Pig!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Player One</h2>
+          <div>
+            <p><span id ="playerOneScore"></span></p>
+            <!-- <ul>
+            </ul> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Current Player</h2>
+          <div id="currentPlayer">
+            <h3 id="currentPlayerOne">Player 1</h3>
+            <h3 id="currentPlayerTwo">Player 2</h3>
+          </div>
+          <p><span id="currentDiceRoll"></span></p>
+          <p>Total: <span id="currentSubTotal"></span></p>
+            <button type="submit" class="btn" id="diceRoll">Roll</button>
+            <button type="submit" class="btn" id="stopRoll">Stop</button>
+        </div>
+        <div class="col-md-3">
+          <h2>Player Two</h2>
+          <div>
+            <p><span id="playerTwoScore"></span></p>
+            <!-- <ul>
+            </ul> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+ </body>
+</html>

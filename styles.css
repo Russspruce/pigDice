@@ -1,0 +1,13 @@
+.col-md-6 {
+  text-align: center;
+}
+
+#currentPlayerOne {
+
+  color: green;
+}
+
+#currentPlayerTwo {
+
+  color: blue;
+}
