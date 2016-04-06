@@ -31,6 +31,9 @@ Score.prototype.doubles = function(randRoll1) {
 
 
 $(document).ready(function() {
+  $("button#rulesButton").click(function() {
+    $('#rulesPigDice').toggle();
+});
 
   $("#currentPlayerTwo").hide();
 

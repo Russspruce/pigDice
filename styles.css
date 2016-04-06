@@ -4,6 +4,12 @@ body {
   font-size: 3em;
 }
 
+ul {
+  display: none;
+  text-align: left;
+  /*list-style-type: none;*/
+}
+
 .jumbotron {
   background-color: #FFBAB0;
   text-align: center;
@@ -29,10 +35,18 @@ h3 {
 
 .playerOneStyle {
 
-  color: #885365;
+  color: #659DF4;
 }
 
 .playerTwoStyle {
 
   color: #CD4139;
+}
+
+#leftPig {
+  float: left;
+}
+
+#rightPig {
+  float: right;
 }
