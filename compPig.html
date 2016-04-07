@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="animate.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link href="compStyles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="comp_scripts.js"></script>
+    <title>Digital Pig</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <img src="Pig_trans.png" id="leftPig" class="animated rollIn">
+        <img src="Pig_trans.png" id="rightPig" class="animated rollIn">
+        <h1>Pass the Pig!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <h2 class="playerOneStyle">Player One</h2>
+          <div>
+            <p><span id ="playerOneScore"></span></p>
+            <!-- <ul>
+            </ul> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Current Player</h2>
+          <div id="currentPlayer">
+            <h3 class="playerOneStyle" id="currentPlayerOne">Player 1</h3>
+            <h3 class="playerTwoStyle" id="currentPlayerTwo">Computer</h3>
+          </div>
+          <p><span id="currentDiceRoll"></span></p>
+          <p>Total: <span id="currentSubTotal"></span></p>
+          <div id="playerButtons">
+            <button type="submit" class="btn btn-primary diceRoll">Roll</button>
+            <button type="submit" class="btn btn-danger" id="stopRoll">Stop</button>
+          </div>
+          <div id="computerButton">
+            <button type="submit" class="btn diceRoll" id="computerPlay">Start</button>
+          </div>
+              <br><br>
+            <button type="button" class="btn btn-info" id="rulesButton">Rules</button>
+            <ul id="rulesPigDice">
+              <li>Roll the dice, seeing how many points you can get.</li>
+              <li>If you roll a 'one', then you lose your points for that round and it's the next player's turn.</li>
+              <li>Select 'Stop' to save points and add them to the total score.</li>
+              <li>First player to '50 points' wins the game!</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <h2 class="playerTwoStyle">Player Two</h2>
+          <div>
+            <p><span id="playerTwoScore"></span></p>
+            <!-- <ul>
+            </ul> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+ </body>
+</html>

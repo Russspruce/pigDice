@@ -1,0 +1,68 @@
+body {
+  background-color: #FCD8D7;
+  font-family: amatic SC;
+  font-size: 3em;
+}
+
+ul {
+  display: none;
+  text-align: left;
+  /*list-style-type: none;*/
+}
+
+.jumbotron {
+  background-color: #FFBAB0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 100px;
+}
+
+.col-md-6 {
+  text-align: center;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+ font-size: 35px;
+}
+
+.btn {
+  font-size: 1em;
+}
+
+.playerOneStyle {
+
+  color: #659DF4;
+}
+
+.playerTwoStyle {
+
+  color: #CD4139;
+}
+
+#currentPlayerOne {
+    display: none;
+}
+
+#currentPlayerTwo {
+  display: none;
+}
+
+#leftPig {
+  float: left;
+}
+
+#rightPig {
+  float: right;
+}
+
+#playerButtons {
+  display: none;
+}
+
+#computerButton {
+  display: none;
+}
