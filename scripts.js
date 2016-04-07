@@ -21,7 +21,9 @@ Score.prototype.addTemp = function(randRoll) {
 
 
 $(document).ready(function() {
-
+  $("button#rulesButton").click(function() {
+    $('#rulesPigDice').toggle();
+});
   $("#currentPlayerTwo").hide();
   var currentPlayer = 1;
   var p1 = new Score();
