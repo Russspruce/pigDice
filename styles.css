@@ -43,6 +43,14 @@ h3 {
   color: #CD4139;
 }
 
+#currentPlayerOne {
+    display: none;
+}
+
+#currentPlayerTwo {
+  display: none;
+}
+
 #leftPig {
   float: left;
 }
