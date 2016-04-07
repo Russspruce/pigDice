@@ -7,7 +7,7 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="scripts.js"></script>
-    <title>Pig Dice</title>
+    <title>Pig Dice Homepage</title>
   </head>
   <body>
     <div class="container">
@@ -17,45 +17,25 @@
         <h1>Pass the Pig!</h1>
       </div>
       <div class="row">
-        <div class="col-md-3">
-          <h2 class="playerOneStyle">Player One</h2>
-          <div>
-            <p><span id ="playerOneScore"></span></p>
-            <!-- <ul>
-            </ul> -->
+        <div class="col-md-4">
+          <h2>Pig Dice Classic</h2>
+          <a href="pigDice.html" type="button" class="btn btn-primary" >Play</a>
+          <div class="pigGameInfo">
+            <p>The classic push-your-luck game where you face off against each other and be the first to get to 50!</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <h2>Current Player</h2>
-          <div id="currentPlayer">
-            <h3 class="playerOneStyle" id="currentPlayerOne">Player 1</h3>
-            <h3 class="playerTwoStyle" id="currentPlayerTwo">Player 2</h3>
-          </div>
-          <p><span id="currentDiceRoll"></span></p>
-          <p>Total: <span id="currentSubTotal"></span></p>
-            <button type="submit" class="btn btn-primary" id="diceRoll">Roll</button>
-            <button type="submit" class="btn btn-danger" id="stopRoll">Stop</button>
-<br><br>
-            <button type="button" class="btn btn-info" id="rulesButton">Rules</button>
-            <ul id="rulesPigDice">
-              <li>Roll the dice, seeing how many points you can get.</li>
-              <li>If you roll a 'one', then you lose your points for that round and it's the next player's turn.</li>
-              <li>Select 'Stop' to save points and add them to the total score.</li>
-              <li>First player to '50 points' wins the game!</li>
-            </ul>
-        </div>
-        <div class="col-md-3">
-          <h2 class="playerTwoStyle">Player Two</h2>
-          <div>
-            <p><span id="playerTwoScore"></span></p>
-            <!-- <ul>
-            </ul> -->
+        <div class="col-md-4">
+          <h2>Pig Dice: X2</h2>
+          <a href="twoDice.html" type="button" class="btn btn-primary" >Play</a>
+          <div class="pigGameInfo">
+            <p>An advance game where you get two dice, giving players a greater challenge! Higher risk with higher reward!</p>
           </div>
         </div>
-
-      </div>
-    </div>
-
-
- </body>
+        <div class="col-md-4">
+          <h2>Digital Pig Dice</h2>
+          <a href="compPig.html" type="button" class="btn btn-primary" >Play</a>
+          <div class="pigGameInfo">
+            <p>All by yourself?  Need someone to play with?  Face off against the computer and see who will win.  Man or machine!</p>
+        </div>
+  </body>
 </html>

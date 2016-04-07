@@ -34,13 +34,19 @@ h3 {
 }
 
 .playerOneStyle {
-
+  font-size: 3em;
   color: #659DF4;
 }
 
 .playerTwoStyle {
-
+  font-size: 3em;
   color: #CD4139;
+}
+.btn {
+  margin: 10px;
+  font-size: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #currentPlayerOne {
@@ -52,10 +58,12 @@ h3 {
 }
 
 #leftPig {
+  width: 150px;
   float: left;
 }
 
 #rightPig {
+  width: 150px;
   float: right;
 }
 
@@ -65,4 +73,8 @@ h3 {
 
 #computerButton {
   display: none;
+}
+
+.goBack {
+  margin-top: 50px;
 }

@@ -22,6 +22,15 @@ ul {
 .col-md-6 {
   text-align: center;
 }
+
+.col-md-4 {
+  text-align: center;
+}
+
+.col-md-4 p{
+  text-align: left;
+}
+
 h2 {
   font-size: 50px;
 }
@@ -30,24 +39,29 @@ h3 {
 }
 
 .btn {
+  margin: 10px;
   font-size: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .playerOneStyle {
-
+  font-size: 3em;
   color: #659DF4;
 }
 
 .playerTwoStyle {
-
+  font-size: 3em;
   color: #CD4139;
 }
 
 #currentPlayerOne {
+  font-size: 3em;
     display: none;
 }
 
 #currentPlayerTwo {
+  font-size: 3em;
   display: none;
 }
 
@@ -57,4 +71,12 @@ h3 {
 
 #rightPig {
   float: right;
+}
+
+.pigGameInfo {
+  margin-top: 25px;
+}
+
+.goBack {
+  margin-top: 50px;
 }

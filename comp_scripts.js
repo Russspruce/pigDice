@@ -9,24 +9,40 @@ function Replay() { //Gives message for replay that will refresh page
    if(response)location.reload();
 }
 
-Score.prototype.computerPig = function(currentPlyr, randRoll) {
+function myTimeout(){
+  console.log("timed out");
+}
+
+Score.prototype.computerPig = function(currentPlyr) {
   for(var index = 0; index < 2; index++){
 
-     $("#currentDiceRoll").text(randRoll);
-       if (randRoll === 1) {
-         this.tempScore = 0;
-         $("#currentSubTotal").text(this.tempScore);
-         $("#currentPlayerOne").toggle();
-         $("#currentPlayerTwo").toggle();
-         break;
-       } else {
-         this.addTemp(randRoll);
-         randRoll = 1 + Math.floor(Math.random() * 6);
-         $("#currentSubTotal").text(this.tempScore);
-       }
+    var randRoll = 1 + Math.floor(Math.random() * 6);
+      $("#currentDiceRoll").text(randRoll);
+         if (randRoll === 1) {
+           this.tempScore = 0;
+           $("#currentSubTotal").text(this.tempScore);
+
+           break;
+         } else {
+           this.addTemp(randRoll);
+           $("#currentSubTotal").text(this.tempScore);
+           if (this.totalScore + this.tempScore >= 50) {
+             alert("Oh darn!  Looks like the machines will now take over the world.  Thanks a lot, Player!")
+             Replay();
+           }
+      }
   }
-   currentPlyr = (currentPlyr * -1);
-   return currentPlyr;
+  $("#currentPlayerOne").toggle();
+  $("#currentPlayerTwo").toggle();
+  $("#playerButtons").toggle();
+  $("#computerButton").toggle();
+  this.totalScore += this.tempScore;
+  $("#playerTwoScore").text(this.totalScore);
+
+  this.tempScore = 0;
+  currentPlyr = (currentPlyr * -1);
+  return currentPlyr;
+
 }
 
 Score.prototype.addTotal = function(tempScore) {
@@ -34,7 +50,9 @@ Score.prototype.addTotal = function(tempScore) {
 
 }
 
-Score.prototype.playerTurn = function(currentPlyr, randRoll) { //goes through roll and calculates points
+Score.prototype.playerTurn = function(currentPlyr) { //goes through roll and calculates points
+  var randRoll = 1 + Math.floor(Math.random() * 6);
+  $("#currentDiceRoll").text(randRoll);
   if (randRoll === 1) {
     this.tempScore = 0;
     currentPlyr = (currentPlyr * -1);
@@ -67,6 +85,10 @@ Score.prototype.addTemp = function(randRoll) {
 
 }
 
+// var timeoutID;
+function delay() {
+  // window.setTimeout(2000);
+}
 
 $(document).ready(function() {
   $("#currentPlayerOne").toggle();
@@ -77,19 +99,16 @@ $(document).ready(function() {
   var currentPlayer = 1;
   var p1 = new Score();
   var p2 = new Score();
-  var randRoll = 0;
 
   $(".diceRoll").click(function(event) {
 
-     randRoll = 1 + Math.floor(Math.random() * 6);
-      $("#currentDiceRoll").text(randRoll);
 
     if (currentPlayer === 1) {
-      currentPlayer = p1.playerTurn(currentPlayer, randRoll);
+      currentPlayer = p1.playerTurn(currentPlayer);
 
     }
       else {
-        currentPlayer = p2.computerPig(currentPlayer, randRoll);
+        currentPlayer = p2.computerPig(currentPlayer);
 
       }
 
@@ -107,21 +126,7 @@ $(document).ready(function() {
 
         }
 
-    } else {
-      p2.stopTurn();
-      $("#playerTwoScore").text(p2.totalScore);
-      currentPlayer = 1;
-        if (p2.totalScore >= 50) {
-          alert("Oh darn!  Looks like the machines will now take over the world.  Thanks a lot, Player!")
-          Replay();
-        }
     }
-
-
-  });
-
-  $("#computerRoll").click(function(event) {
-
 
   });
 

@@ -12,8 +12,8 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <img src="Pig_trans.png" id="leftPig" class="animated rollIn">
-        <img src="Pig_trans.png" id="rightPig" class="animated rollIn">
+        <img src="piggie.png" id="leftPig" class="animated rollIn">
+        <img src="minecraft-pig.png" id="rightPig" class="animated rollIn">
         <h1>Pass the Pig!</h1>
       </div>
       <div class="row">
@@ -28,8 +28,8 @@
         <div class="col-md-6">
           <h2>Current Player</h2>
           <div id="currentPlayer">
-            <h3 class="playerOneStyle" id="currentPlayerOne">Player 1</h3>
-            <h3 class="playerTwoStyle" id="currentPlayerTwo">Computer</h3>
+            <h3 class="playerOneStyle animated flash" id="currentPlayerOne">Player 1</h3>
+            <h3 class="playerTwoStyle animated flash" id="currentPlayerTwo">Computer</h3>
           </div>
           <p><span id="currentDiceRoll"></span></p>
           <p>Total: <span id="currentSubTotal"></span></p>
@@ -48,13 +48,13 @@
               <li>Select 'Stop' to save points and add them to the total score.</li>
               <li>First player to '50 points' wins the game!</li>
             </ul>
+            <br>
+            <a href="index.html" type="button" class="btn btn-success goBack">Go Back</a>
         </div>
         <div class="col-md-3">
-          <h2 class="playerTwoStyle">Player Two</h2>
+          <h2 class="playerTwoStyle">Computer</h2>
           <div>
             <p><span id="playerTwoScore"></span></p>
-            <!-- <ul>
-            </ul> -->
           </div>
         </div>
 
